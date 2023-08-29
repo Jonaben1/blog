@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="col-md-8 card mb-4 mt-3">
+      <h1 align="center">Contact Form</h1>
+      <hr>
+      <p>We want to hear from you. Please fill out this contact form for suggestions.</p>
+      <hr>
+      <br>
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+     </form>
+ </div>
+{% endblock %}
